@@ -13,8 +13,4 @@ public class Question
 		this.task = task;
 	}
 	
-	public void Question(int id, String task,int value)
-	{
-		
-	}
 }

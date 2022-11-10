@@ -9,4 +9,3 @@ public class Department
 		this.name = name;
 	}
 }
-//Wo ist hier der Fehler?

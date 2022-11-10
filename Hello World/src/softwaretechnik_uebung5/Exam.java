@@ -6,10 +6,12 @@ public class Exam
 {
 	private int maxValue;
 	private List<Student> registered;
+	private List<Question> questions;
 	
-	public Exam(int maxValue)
+	public Exam(int maxValue, int idq1, String taskq1, int maxValueq1)
 	{
 		this.maxValue = maxValue;
+		Question question = new Question(taskq1, idq1, maxValueq1);
 	}
 	
 	public boolean register(Student student)
@@ -31,9 +33,10 @@ public class Exam
 		}
 	}
 	
-	public void addQuestion(int id, String Task, int value)
+	public void addQuestion(int id, String task, int value)
 	{
-		
+		Question question = new Question(task, id, value);
+		questions.add(question);
 	}
 	
 	public List<Student> getRegistered()

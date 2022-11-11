@@ -7,7 +7,7 @@ public class Course
 	private int id;
 	private String name;
 	private int maxCapacity;
-	private boolean isFull;
+	private boolean isFull = false;
 	private List<Professor> professor;
 	private List<Student> students;
 	private List<TA> tas;
@@ -22,12 +22,16 @@ public class Course
 	
 	public void enroll(Student student)
 	{
-		if (students.size() > maxCapacity)
+		if (isFull == true)
 		{
 			System.out.println("Der Kurs hat bereits die maximale Mitgliederzahl!");
 			return;
 		}
 		students.add(student);
+		if (students.size() == maxCapacity);
+		{
+			isFull = true;
+		}
 	}
 	
 	public void apply(TA ta)

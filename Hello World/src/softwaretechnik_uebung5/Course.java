@@ -10,6 +10,7 @@ public class Course
 	private boolean isFull;
 	private List<Professor> professor;
 	private List<Student> students;
+	private List<TA> tas;
 	
 	public Course(int id, String name, int maxCapacity, Professor professor)
 	{
@@ -28,5 +29,38 @@ public class Course
 		}
 		students.add(student);
 	}
+	
+	public void apply(TA ta)
+	{
+		tas.add(ta);
+		//Bewerbungsprozess zu hinterlegen
+	}
+	
+	public void setMaxCap(int max)
+	{
+		maxCapacity = max;
+	}
+
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+
+	public List<Professor> getProfessor() 
+	{
+		return professor;
+	}
+
+	public List<TA> getTas() 
+	{
+		return tas;
+	}
+
+	public void setTas(TA ta) 
+	{
+		tas.add(ta);
+	}
+	
+	
 	
 }

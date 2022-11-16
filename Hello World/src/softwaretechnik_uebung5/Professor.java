@@ -3,9 +3,9 @@ package softwaretechnik_uebung5;
 public class Professor extends Employee 
 {
 
-	public Professor(String name, int id) 
+	public Professor(String name, int id, Department department) 
 	{
-		super(name, id);
+		super(name, id, department);
 		
 	}
 

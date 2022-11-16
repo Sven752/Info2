@@ -16,12 +16,6 @@ public class Exam
 	
 	public boolean register(Student student)
 	{
-		if (registered.isEmpty()  == true)
-		{
-			registered.add(student);
-			return true;
-		}
-		
 		if (registered.contains(student))
 		{
 			return false;
@@ -45,8 +39,12 @@ public class Exam
 	}
 
 
-	public void setMaxValue(int maxValue) {
+	public void setMaxValue(int maxValue) 
+	{
+		if (maxValue < registered.size())
+		{
 		this.maxValue = maxValue;
+		}
 	}
 	
 }

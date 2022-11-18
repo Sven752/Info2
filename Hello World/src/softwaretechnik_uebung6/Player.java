@@ -15,4 +15,11 @@ public class Player
 		Shuffle shuffle = new Shuffle();
 		currentCard = shuffle.shuffle();
 	}
+
+	public Card getCurrentCard() {
+		return currentCard;
+	}
+
+	
+	
 }

@@ -5,7 +5,7 @@ public class uebung6_Main
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
+		chair game_chair = new chair();
 
 	}
 

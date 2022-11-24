@@ -34,7 +34,7 @@ public class chair
 		int i = 1;
 		for (i=1; i<=5;i++)
 		{
-			System.out.println("Your currnt number is:  " + player2.getCurrentCard().getNumber());
+			System.out.println("Your current number is:  " + player2.getCurrentCard().getNumber());
 			System.out.println("Do you want to draw another card(true) or place your bet(false)? You can draw 5 cards at max.");
 			answer = in.nextBoolean();
 			if(answer)

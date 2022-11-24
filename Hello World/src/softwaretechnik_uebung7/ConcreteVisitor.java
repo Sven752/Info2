@@ -3,9 +3,27 @@ package softwaretechnik_uebung7;
 public class ConcreteVisitor implements Visitor
 {
 
+	double movingCost;
+	
 	@Override
-	public void visit(Glass e) {
-		// TODO Auto-generated method stub
+	public void visit(Glass e) 
+	{
+		int thickness = e.getTickness();
+		
+		switch (thickness)
+		{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			default:
+				break;
+				
+		}
+		
+			
 		
 	}
 
@@ -19,6 +37,13 @@ public class ConcreteVisitor implements Visitor
 	public void visit(Furniture e) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public double getMovingCost(HouseholdItem item)
+	{
+		double tmpMC = 0;
+		item.accept(this);
+		return tmpMC;
 	}
 
 }

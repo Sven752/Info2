@@ -13,14 +13,17 @@ public class ConcreteVisitor implements Visitor
 		switch (thickness)
 		{
 			case 1:
+				movingCost = e.getLenght()*2;
 				break;
 			case 2:
+				movingCost = e.getLenght()*1.2;
 				break;
 			case 3:
+				movingCost = e.getLenght()*0.7;
 				break;
 			default:
+				System.out.println("Fucking moron, there is no glass with this thickness!");
 				break;
-				
 		}
 		
 			
@@ -29,13 +32,20 @@ public class ConcreteVisitor implements Visitor
 
 	@Override
 	public void visit(Electronic e) {
-		// TODO Auto-generated method stub
+		if (e.getFragile())
+		{
+			movingCost = e.getWeight()/2;
+		}
+		else
+		{
+			movingCost = e.getWeight()/15*5;
+		}
 		
 	}
 
 	@Override
 	public void visit(Furniture e) {
-		// TODO Auto-generated method stub
+		movingCost = e.getWeight()/20*5;
 		
 	}
 	

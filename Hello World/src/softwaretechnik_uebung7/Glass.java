@@ -18,6 +18,11 @@ public class Glass implements HouseholdItem{
 		this.tickness = tickness;
 	
 	}
+	
+	public void accept(Visitor v)
+	{
+		v.visit(this);
+	}
 
 
 

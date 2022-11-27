@@ -3,13 +3,10 @@ package softwaretechnik_uebung7_1;
 public class Electronic implements HouseholdItem{
 	
 	String name;
-	
 	int lenght;
 	int width;
 	int height;
-
 	int weight;
-	
 	Boolean fragile;
 	
 
@@ -64,9 +61,17 @@ public class Electronic implements HouseholdItem{
 
 
 	@Override
-	public void accept(Visitor v) 
+	public void calculateCost(Visitor v) 
 	{
-		v.visit(this);
+		v.getCost(this);
+		
+	}
+
+
+	@Override
+	public void calculatePackaging(Visitor v) 
+	{
+		v.getPackaging(this);
 		
 	}
 	

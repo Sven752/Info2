@@ -4,12 +4,9 @@ public class Furniture implements HouseholdItem{
 	
 	String name;
 	String type;
-
-
 	int lenght;
 	int width;
 	int height;
-	
 	int weight;
 
 	
@@ -69,8 +66,19 @@ public class Furniture implements HouseholdItem{
 
 
 	@Override
-	public void accept(Visitor v) {
-		v.visit(this);
+	public void calculateCost(Visitor v) 
+	{
+		v.getCost(this);
+		
+	}
+
+
+
+
+	@Override
+	public void calculatePackaging(Visitor v) 
+	{
+		v.getPackaging(this);
 		
 	}
 

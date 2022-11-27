@@ -6,7 +6,6 @@ public class Glass implements HouseholdItem{
 	int lenght;
 	int width;
 	int height;
-
 	int tickness;
 
 	
@@ -19,9 +18,9 @@ public class Glass implements HouseholdItem{
 	
 	}
 	
-	public void accept(Visitor v)
+	public void calculateCost(Visitor v)
 	{
-		v.visit(this);
+		v.getCost(this);
 	}
 
 
@@ -58,6 +57,12 @@ public class Glass implements HouseholdItem{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public void calculatePackaging(Visitor v) 
+	{
+		v.getPackaging(this);		
 	}
 
 	

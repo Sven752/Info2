@@ -30,9 +30,9 @@ public class CompositeTeam implements Team
 		int number = 0; 
 		for (Team index: subTeams)
 		{
-			number = subTeams.get(subTeams.indexOf(index)).getNumberofAthletes();
+			number += subTeams.get(subTeams.indexOf(index)).getNumberofAthletes();
 		}
-		System.out.println(name + "has following number of members");
+		System.out.println(name + " has following number of members");
 		System.out.println(number);
 		return number;
 	}
@@ -41,9 +41,9 @@ public class CompositeTeam implements Team
 		int number = 0; 
 		for (Team index: subTeams)
 		{
-			number+= subTeams.get(subTeams.indexOf(index)).getNumberofGolds();
+			number += subTeams.get(subTeams.indexOf(index)).getNumberofGolds();
 		}
-		System.out.println(name + "has following number of gold medals");
+		System.out.println(name + " has following number of gold medals");
 		System.out.println(number);
 		return number;
 	}

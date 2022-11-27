@@ -27,7 +27,9 @@ public static void main(String[] args) {
         List<HouseholdItem> namesList = Arrays.asList(microwaveOven,tv,wineGlass,coffeeTable,bed,cupboard );
         householdItmes.addAll(namesList);
 		
-  
+        ConcreteVisitor a = new ConcreteVisitor();
+        a.getCost(wineGlass);
+        
 }
 
 }

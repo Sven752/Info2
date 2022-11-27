@@ -91,8 +91,8 @@ public class TeamEditor {
 		s9.addTeam(j);
 		s6.addTeam(k);
 		
-		t1.getNumberofGolds();
-
+		t1.getNumberofAthletes();
+	
 	}
 
 }

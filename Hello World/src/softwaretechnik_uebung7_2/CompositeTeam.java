@@ -1,11 +1,17 @@
 package softwaretechnik_uebung7_2;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class CompositeTeam implements Team
 {
-	private List<Team> subTeams = new ArrayList<Team>();
+	private ArrayList<Team> subTeams = new ArrayList<Team>();
+	private String name;
+	
+	public CompositeTeam(String name)
+	{
+		this.name = name;
+	}
 	
 	public ArrayList<String> getNameofSubteam()
 	{
@@ -14,6 +20,8 @@ public class CompositeTeam implements Team
 		{
 			liste.addAll(subTeams.get(subTeams.indexOf(index)).getNameofSubteam());
 		}
+		System.out.println(name+ "has following members");
+		System.out.println(subTeams.toString());
 		return liste;
 	}
 	
@@ -22,8 +30,10 @@ public class CompositeTeam implements Team
 		int number = 0; 
 		for (Team index: subTeams)
 		{
-			number++;
+			number = subTeams.get(subTeams.indexOf(index)).getNumberofAthletes();
 		}
+		System.out.println(name + "has following number of members");
+		System.out.println(number);
 		return number;
 	}
 	public int getNumberofGolds()
@@ -31,8 +41,27 @@ public class CompositeTeam implements Team
 		int number = 0; 
 		for (Team index: subTeams)
 		{
-			number+= subTeams[index];
+			number+= subTeams.get(subTeams.indexOf(index)).getNumberofGolds();
 		}
+		System.out.println(name + "has following number of gold medals");
+		System.out.println(number);
 		return number;
 	}
+	
+	public void addTeam(Team team)
+	{
+		subTeams.add(team);
+	}
+	
+	public void removeTeam(Team team)
+	{
+		subTeams.remove(team);
+	}
+	
+	public ArrayList<Team> getTeams()
+	{
+		return subTeams;
+	}
+	
+	
 }

@@ -1,13 +1,31 @@
 package softwaretechnik_uebung7_2;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Athlete implements Team 
 {
 	String name;
-	int Gold;
+	int gold;
 	
+	public Athlete(String name, int gold)
+	{
+		this.name = name;
+		this.gold = gold;
+	}
+	
+	public Athlete(String name)
+	{
+		this.name = name;
+	}
+	
+	
+	
+	
+	public void wonGold()
+	{
+		gold++;
+	}
 	
 	public ArrayList<String> getNameofSubteam() 
 	{
@@ -17,14 +35,13 @@ public class Athlete implements Team
 		
 	}
 	
-	@Override
-	public int getNumberofAthletes() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getNumberofAthletes() 
+	{
+		return 1;
 	}
-	@Override
-	public int getNumberofGolds() {
-		// TODO Auto-generated method stub
-		return 0;
+
+	public int getNumberofGolds() 
+	{
+		return gold;
 	}
 }

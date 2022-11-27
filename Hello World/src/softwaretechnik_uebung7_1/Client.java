@@ -1,4 +1,4 @@
-package softwaretechnik_uebung7;
+package softwaretechnik_uebung7_1;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,30 +1,33 @@
-package softwaretechnik_uebung7;
+package softwaretechnik_uebung7_1;
 
-public class Electronic implements HouseholdItem{
+public class Furniture implements HouseholdItem{
 	
 	String name;
-	
+	String type;
+
+
 	int lenght;
 	int width;
 	int height;
-
+	
 	int weight;
-	
-	Boolean fragile;
-	
 
-
-	public Electronic(String name, int lenght, int width, int height, int weight, Boolean fragile) {
+	
+	public Furniture(String name, String type, int lenght, int width, int height, int weight) {
 		this.name = name;
+		this.type = type;
 		this.lenght = lenght;
 		this.width = width;
 		this.height = height;
 		this.weight = weight;
-		this.fragile = fragile;
 	}
 
+
 	
+
 //Getters and Setters
+
+
 
 	public int getHeight() {
 		return height;}
@@ -39,38 +42,37 @@ public class Electronic implements HouseholdItem{
 		this.lenght = lenght;}
 
 	public int getWidth() {
-		return width;}
+		return width;	}
 
 	public void setWidth(Integer width) {
 		this.width = width;}
 
-	public Integer getWeight() {
+	public int getWeight() {
 		return weight;}
 
 	public void setWeight(Integer weight) {
 		this.weight = weight;}
+
+	public String getType() {
+		return type;}
+
+	public void setType(String type) {
+		this.type = type;}
 
 	public String getName() {
 		return name;}
 
 	public void setName(String name) {
 		this.name = name;}
-	
-	public Boolean getFragile() {
-		return fragile;}
 
-	public void setFragile(Boolean fragile) {
-		this.fragile = fragile;}
+
 
 
 	@Override
-	public void accept(Visitor v) 
-	{
+	public void accept(Visitor v) {
 		v.visit(this);
 		
 	}
-	
-	
-	
 
+	
 }
